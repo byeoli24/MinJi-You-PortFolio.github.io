@@ -1,0 +1,142 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --text-color:#666666;/*본문 텍스트 색상*/
+    --a-color: white; /*#ffffff, rgba(255,255,255,1) 링크(a tag)텍스트 색상*/
+
+}
+
+body {
+    min-width: 760px;
+    font-family: 'Noto Sans KR', sans-serif;/*sans-serif - 고딕체*/
+    color: var(--text-color); 
+}
+
+a {
+    color: var(--text-color);
+} /*a 태그 자체에 컬러를 지정해주었으므로 
+    방문 및 링크 컬러가 전부 해당 컬러로 지정됨*/
+
+/* a:link {
+    color: red;
+}
+
+a:visited {
+    color:green;
+}
+
+a:hover {
+    color:skyblue;
+}
+
+a:active {
+    color:blueviolet
+} */
+
+/* header layout */
+#main-header {
+    height: 60px;
+    background:#1d4088;
+    border-bottom: 1px solid black;
+}
+
+#main-header h1 a {
+    color:var(--a-color);
+    line-height: 60px;
+    padding-left:10px; /*or margin-left: 10px*/
+    text-transform: capitalize;
+}
+
+/*gnb layout*/
+
+#main-gnb {
+    overflow: hidden;
+    border-bottom: 1px solid black;
+    background-color: #32394a;
+}
+
+#main-gnb ul {
+    float:left;
+}
+
+#main-gnb li {
+    float: left;
+    margin: 0 10px;
+}
+
+#main-gnb ul li a {
+    font-weight: bold;
+    color: var(--a-color); 
+    display: block; 
+    padding: 10px;
+}
+
+/* 오른쪽 로그인 영역 */
+#main-gnb ul:last-child {
+    float: right;
+}
+
+#wrap {
+    float: left;
+}
+
+/* 컨텐츠 영역 */
+#wrap {
+    overflow: hidden;
+    background-color: #71b1d1; }
+
+#wrap > aside {
+    float:left;
+    width: 200px;
+}
+
+#wrap > aside > #main-lnb > ul > li > a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: var(--a-color);
+    padding-left: 20px;
+    border-bottom: 1px solid #96d6f6;
+}
+
+#contents-wrap {
+    float: left;
+    width: calc(100% - 200px);
+    background: #ffffff;
+    /* padding-left: 200px; */
+}
+
+#contents {
+    padding: 30px;
+}
+
+#main-footer {
+    padding: 10px;
+    border-top: 3px solid black;
+    text-align: center;
+}
+
+#main-footer h3 {
+    font-weight: bold;
+}
+
+
+
+
+/* #main-gnb {
+    overflow: hidden;
+    border-bottom: 1px solid black;
+    background-color: #32394a;
+    padding: 0 0 5px; 
+}
+
+
+#main-gnb .left li { 
+    float:left; display: inline;
+    padding-right:10px; }
+
+    #main-gnb .left li:last-child {padding-right: 0px;}
+
+#main-gnb .right li {
+    float:right; padding-right:10px; } */
